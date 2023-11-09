@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v1
+      - name: NpmInstall
+        run: npm run install-deps
       - name: Lint
         uses: Krizzu/eslint-check-action@v1.1.0
         with:
