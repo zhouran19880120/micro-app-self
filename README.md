@@ -7,7 +7,7 @@
 </p>
 
 # 📖简介
-`Micro-App-DevTools`是基于京东零售推出的一款为`micro-app`框架而开发的`chrome`插件，旨在方便开发者对微前端进行数据查看以及调试,提升工作效率。
+`Micro-App-DevTools`是基于京东零售推出的一款为`micro-app`框架而开发的`chrome`插件，旨在方便开发者对微前端进行数据查看以及调试,提升工作效率。adfasf
 
 # 如何使用
 
