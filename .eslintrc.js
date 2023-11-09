@@ -92,98 +92,98 @@ module.exports = {
     },
   },
   noInlineConfig: true,
-  overrides: [
-    // ----------------------
-    //  json files
-    // ----------------------
-    {
-      files: ['.json', '.*.json'],
-      extends: ['lvmcn/json'],
-    },
-    // ----------------------
-    //  building tools files
-    // ----------------------
-    {
-      files: ['*.js', '.*.js'],
-      excludedFiles: ['src/**'],
-      extends: ['lvmcn/javascript/node'],
-      rules: buildingToolsJavascriptRules,
-    },
-    {
-      files: ['*.ts', '.*.ts', '*.tsx', '.*.tsx'],
-      excludedFiles: ['src/**'],
-      extends: ['lvmcn/typescript/node'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        ecmaVersion: 6,
-        ecmaFeatures: {
-          modules: true,
-          jsx: true,
-          legacyDecorators: true,
-        },
-        sourceType: 'module',
-        project: './tsconfig.json',
-      },
-      rules: buildingToolsTypescriptRules,
-    },
-    // ----------------------
-    //  project source files
-    // ----------------------
-    {
-      files: ['src/**/*.js', 'src/**/*.jsx'],
-      extends: ['lvmcn/javascript/react'],
-      rules: javascriptRules,
-    },
-    {
-      files: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.tx'],
-      extends: ['lvmcn/typescript/react'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        ecmaVersion: 6,
-        ecmaFeatures: {
-          modules: true,
-          jsx: true,
-          legacyDecorators: true,
-        },
-        sourceType: 'module',
-        project: './tsconfig.json',
-      },
-      rules: typescriptRules,
-    },
-    // d.ts
-    {
-      files: ['src/**/*.d.ts'],
-      rules: {
-        'react/no-typos': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-      },
-    },
-    // app entries
-    {
-      files: ['src/app/*/index.tsx'],
-      rules: { 'unicorn/prefer-module': 'off' },
-    },
-    // utils
-    {
-      files: ['src/utils/*.ts'],
-      rules: {},
-    },
-    // utils logger
-    {
-      files: ['src/utils/logger.ts'],
-      rules: { 'no-console': 'off' },
-    },
-    // store services
-    {
-      files: [
-        'src/store/services/**/*.ts',
-        'src/store/services/**/*.tsx',
-      ],
-      rules: {
-        'unicorn/filename-case': 'off',
-        'unicorn/no-array-for-each': 'off',
-        '@typescript-eslint/no-redeclare': 'off',
-      },
-    },
-  ],
+  // overrides: [
+  //   // ----------------------
+  //   //  json files
+  //   // ----------------------
+  //   {
+  //     files: ['.json', '.*.json'],
+  //     extends: ['lvmcn/json'],
+  //   },
+  //   // ----------------------
+  //   //  building tools files
+  //   // ----------------------
+  //   {
+  //     files: ['*.js', '.*.js'],
+  //     excludedFiles: ['src/**'],
+  //     extends: ['lvmcn/javascript/node'],
+  //     rules: buildingToolsJavascriptRules,
+  //   },
+  //   {
+  //     files: ['*.ts', '.*.ts', '*.tsx', '.*.tsx'],
+  //     excludedFiles: ['src/**'],
+  //     extends: ['lvmcn/typescript/node'],
+  //     parser: '@typescript-eslint/parser',
+  //     parserOptions: {
+  //       ecmaVersion: 6,
+  //       ecmaFeatures: {
+  //         modules: true,
+  //         jsx: true,
+  //         legacyDecorators: true,
+  //       },
+  //       sourceType: 'module',
+  //       project: './tsconfig.json',
+  //     },
+  //     rules: buildingToolsTypescriptRules,
+  //   },
+  //   // ----------------------
+  //   //  project source files
+  //   // ----------------------
+  //   {
+  //     files: ['src/**/*.js', 'src/**/*.jsx'],
+  //     extends: ['lvmcn/javascript/react'],
+  //     rules: javascriptRules,
+  //   },
+  //   {
+  //     files: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.tx'],
+  //     extends: ['lvmcn/typescript/react'],
+  //     parser: '@typescript-eslint/parser',
+  //     parserOptions: {
+  //       ecmaVersion: 6,
+  //       ecmaFeatures: {
+  //         modules: true,
+  //         jsx: true,
+  //         legacyDecorators: true,
+  //       },
+  //       sourceType: 'module',
+  //       project: './tsconfig.json',
+  //     },
+  //     rules: typescriptRules,
+  //   },
+  //   // d.ts
+  //   {
+  //     files: ['src/**/*.d.ts'],
+  //     rules: {
+  //       'react/no-typos': 'off',
+  //       '@typescript-eslint/no-unused-vars': 'off',
+  //     },
+  //   },
+  //   // app entries
+  //   {
+  //     files: ['src/app/*/index.tsx'],
+  //     rules: { 'unicorn/prefer-module': 'off' },
+  //   },
+  //   // utils
+  //   {
+  //     files: ['src/utils/*.ts'],
+  //     rules: {},
+  //   },
+  //   // utils logger
+  //   {
+  //     files: ['src/utils/logger.ts'],
+  //     rules: { 'no-console': 'off' },
+  //   },
+  //   // store services
+  //   {
+  //     files: [
+  //       'src/store/services/**/*.ts',
+  //       'src/store/services/**/*.tsx',
+  //     ],
+  //     rules: {
+  //       'unicorn/filename-case': 'off',
+  //       'unicorn/no-array-for-each': 'off',
+  //       '@typescript-eslint/no-redeclare': 'off',
+  //     },
+  //   },
+  // ],
 };
